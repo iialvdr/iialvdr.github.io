@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Perusahaan Startup - Rivaldi Aditya Maulana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-200 min-h-screen antialiased">
+    <div class="bg-bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <header class="p-4 sm:p-8 lg:hidden fixed top-0 left-0 w-full z-40 bg-[rgba(15,23,42,0.9)] backdrop-blur-md">
+        <div class="flex justify-between items-center max-w-7xl mx-auto">
+            <h1 class="text-xl font-bold text-white">Rivaldi</h1>
+            <button id="hamburger-menu" class="text-purple-400 p-2 rounded-md focus:outline-none">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[rgba(15,23,42,0.9)] backdrop-blur-md z-30 overflow-y-auto pt-24">
+        <div class="glass-container p-8 m-4 sm:m-8">
+            <nav class="w-full text-left space-y-2">
+                <a href="index.html" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
+                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg><span>Beranda</span></span>
+                </a>
+                <a href="projects.html" class="block p-3 text-sm font-medium rounded-lg text-purple-400 bg-slate-800 transition-colors duration-300">
+                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"></path><path d="M12 9v6"></path><path d="M9 12h6"></path></svg><span>Contoh Proyek</span></span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 sm:p-8">
+        <aside class="lg:sticky lg:top-8 h-fit p-8 glass-container flex-col items-center text-center hidden lg:flex">
+            <div class="w-40 h-40 mb-6 rounded-full overflow-hidden profile-border">
+                <img
+                    src="https://placehold.co/160x160/1e293b/e2e8f0?text=Valdi"
+                    alt="Rivaldi Aditya Maulana"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+            <h1 class="text-3xl font-bold text-white mb-2">Rivaldi Aditya Maulana</h1>
+            <p class="text-purple-400 font-medium mb-6">UI/UX Designer & Frontend Web Developer</p>
+            <div class="space-y-4 text-left w-full mt-4">
+                <p class="flex items-center space-x-3 text-sm text-slate-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path><path d="M12 19a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"></path></svg>
+                    <span>Johar Baru, Jakarta Pusat</span>
+                </p>
+                <a href="tel:085155433102" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>0851-5543-3102</span>
+                </a>
+                <a href="mailto:rivaldiadityamaulana28@gmail.com" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                    <span>rivaldiadityamaulana28@gmail.com</span>
+                </a>
+            </div>
+            <div class="w-full h-px bg-slate-800 my-6"></div>
+            <nav class="w-full text-left space-y-2">
+                <a href="index.html" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500 mr-2"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+                    <span>Beranda</span>
+                </a>
+                <a href="projects.html" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-purple-400 bg-slate-800 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500 mr-2"><path d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"></path><path d="M12 9v6"></path><path d="M9 12h6"></path></svg>
+                    <span>Contoh Proyek</span>
+                </a>
+            </nav>
+        </aside>
+        <div class="lg:col-span-2 space-y-8 p-4 sm:p-8 lg:p-0 lg:mt-8">
+            <section id="project-detail" class="p-8 glass-container">
+                <a href="index.html#work-examples" class="text-purple-400 hover:underline mb-4 inline-block">&larr; Kembali ke Proyek</a>
+                <h2 class="text-3xl font-bold text-white mb-4 flex items-center">Landing Page Perusahaan Startup</h2>
+                <img src="https://placehold.co/800x500/1e293b/94a3b8?text=Project+3+Detail" alt="Landing Page Perusahaan Startup" class="w-full mb-6 rounded-lg">
+                <p class="text-gray-400 leading-relaxed mb-4">
+                    Proyek ini merupakan perancangan landing page yang modern dan responsif untuk perusahaan startup. Fokus utama proyek ini adalah menarik perhatian calon pengguna dan menampilkan informasi produk secara ringkas dan menarik. Aku menggunakan Tailwind CSS untuk mempercepat proses pengembangan dan memastikan desain yang konsisten.
+                </p>
+                <h3 class="text-xl font-semibold text-white mb-2">Fitur Utama</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                    <li>Desain responsif yang optimal di semua perangkat.</li>
+                    <li>Animasi scroll yang halus untuk pengalaman visual yang menarik.</li>
+                    <li>Tata letak yang bersih dan terstruktur dengan jelas.</li>
+                    <li>Formulir kontak untuk mendapatkan lead atau data pengguna.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
