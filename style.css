@@ -124,12 +124,12 @@ html {
 
 /* Perbaikan warna highlight teks */
 ::selection {
-    background-color: var(--color-text-purple);
-    color: var(--color-white-transparent);
+    background-color: var(--color-text-light-purple);
+    color: var(--color-dark-blue);
 }
 ::-moz-selection {
-    background-color: var(--color-text-purple);
-    color: var(--color-white-transparent);
+    background-color: var(--color-text-light-purple);
+    color: var(--color-dark-blue);
 }
 
 /* Styling for the scrollbar */
