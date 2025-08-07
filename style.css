@@ -1,0 +1,47 @@
+/* Mengatur font, background, dan smooth scroll untuk pengalaman pengguna yang lebih baik */
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    /* Ubah URL di bawah ini dengan gambar background pilihanmu */
+    background-image: url('https://images.unsplash.com/photo-1549492659-4d32a445e998?q=80&w=1974&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Membuat background tetap saat digulir */
+}
+html {
+    scroll-padding-top: 5rem; /* Menyesuaikan dengan tinggi fixed header, jika ada */
+}
+
+/* Container utama dengan efek glassmorphism */
+.glass-container {
+    background: rgba(255, 255, 255, 0.1); /* Background transparan */
+    backdrop-filter: blur(10px); /* Efek buram */
+    -webkit-backdrop-filter: blur(10px); /* Dukungan untuk browser Webkit */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Border transparan */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Shadow untuk kedalaman */
+    border-radius: 2rem; /* Sudut membulat */
+}
+
+/* Efek border gradient pada foto profil */
+.profile-border {
+    position: relative;
+    z-index: 1;
+}
+.profile-border::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, #a855f7, #6b21a8, #c084fc);
+    border-radius: 9999px;
+    z-index: -1;
+    animation: rotate-gradient 3s linear infinite;
+}
+
+@keyframes rotate-gradient {
+    to {
+        transform: rotate(360deg);
+    }
+}
