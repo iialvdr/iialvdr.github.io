@@ -21,7 +21,7 @@
         <div class="bubble"></div>
     </div>
 
-    <header class="p-4 lg:hidden fixed top-0 left-0 w-full z-40 bg-[rgba(15,23,42,0.9)] backdrop-blur-md">
+    <header class="p-4 sm:p-8 lg:hidden fixed top-0 left-0 w-full z-40 bg-[rgba(15,23,42,0.9)] backdrop-blur-md">
         <div class="flex justify-between items-center max-w-7xl mx-auto">
             <h1 class="text-xl font-bold text-white">Rivaldi</h1>
             <button id="hamburger-menu" class="text-purple-400 p-2 rounded-md focus:outline-none">
@@ -33,8 +33,8 @@
         </div>
     </header>
 
-    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[rgba(15,23,42,0.9)] backdrop-blur-md z-30 overflow-y-auto pt-20">
-        <div class="p-8 m-4 sm:m-8 glass-container">
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[rgba(15,23,42,0.9)] backdrop-blur-md z-30 overflow-y-auto pt-24">
+        <div class="glass-container p-8 m-4 sm:m-8">
             <nav class="w-full text-left space-y-2">
                 <a href="#about" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
                     <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="m9 18 6-6-6-6"></path></svg><span>Tentang Saya</span></span>
@@ -64,9 +64,9 @@
         </div>
     </div>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 sm:p-8">
-
-        <aside class="lg:sticky lg:top-8 h-fit glass-container flex-col items-center text-center p-8 hidden lg:flex">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <aside class="lg:sticky lg:top-8 h-fit p-8 glass-container flex-col items-center text-center hidden lg:flex">
             <div class="w-40 h-40 mb-6 rounded-full overflow-hidden profile-border">
                 <img
                     src="https://placehold.co/160x160/1e293b/e2e8f0?text=Valdi"
@@ -134,37 +134,39 @@
             </nav>
         </aside>
         
-        <div class="lg:hidden p-8 glass-container flex flex-col items-center text-center mt-20">
-            <div class="w-40 h-40 mb-6 rounded-full overflow-hidden profile-border">
-                <img
-                    src="https://placehold.co/160x160/1e293b/e2e8f0?text=Valdi"
-                    alt="Rivaldi Aditya Maulana"
-                    class="w-full h-full object-cover"
-                />
-            </div>
-            <h1 class="text-3xl font-bold text-white mb-2">Rivaldi Aditya Maulana</h1>
-            <p class="text-purple-400 font-medium mb-6">UI/UX Designer & Frontend Web Developer</p>
-            <div class="space-y-4 text-left w-full mt-4">
-                <a href="tel:085155433102" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <span>0851-5543-3102</span>
-                </a>
-                <a href="mailto:rivaldiadityamaulana28@gmail.com" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                    <span>rivaldiadityamaulana28@gmail.com</span>
-                </a>
-                <a href="https://rivaldi-portofolio.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                    <span>Portofolio</span>
-                </a>
-                <a href="https://www.linkedin.com/in/rivaldi-aditya-maulana-a5a1a5223/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    <span>LinkedIn</span>
-                </a>
+        <div class="lg:hidden p-4 sm:p-8">
+            <div class="glass-container flex flex-col items-center text-center p-8 mt-20">
+                <div class="w-40 h-40 mb-6 rounded-full overflow-hidden profile-border">
+                    <img
+                        src="https://placehold.co/160x160/1e293b/e2e8f0?text=Valdi"
+                        alt="Rivaldi Aditya Maulana"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <h1 class="text-3xl font-bold text-white mb-2">Rivaldi Aditya Maulana</h1>
+                <p class="text-purple-400 font-medium mb-6">UI/UX Designer & Frontend Web Developer</p>
+                <div class="space-y-4 text-left w-full mt-4">
+                    <a href="tel:085155433102" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>0851-5543-3102</span>
+                    </a>
+                    <a href="mailto:rivaldiadityamaulana28@gmail.com" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        <span>rivaldiadityamaulana28@gmail.com</span>
+                    </a>
+                    <a href="https://rivaldi-portofolio.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        <span>Portofolio</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/rivaldi-aditya-maulana-a5a1a5223/" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="lg:col-span-2 space-y-8">
+        <div class="lg:col-span-2 space-y-8 p-4 sm:p-8 lg:p-0">
             <section id="about" class="p-8 glass-container">
                 <h2 class="text-3xl font-bold text-white mb-4 flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
