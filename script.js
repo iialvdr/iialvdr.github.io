@@ -20,6 +20,7 @@ hamburgerMenu.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
     hamburgerIcon.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
+    document.body.classList.toggle('overflow-hidden');
 });
 
 // Sembunyikan menu setelah mengklik link
@@ -29,6 +30,7 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
             mobileMenu.classList.add('hidden');
             hamburgerIcon.classList.remove('hidden');
             closeIcon.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
         }
     });
 });
