@@ -1,10 +1,24 @@
 /* Mengatur font, background, dan smooth scroll untuk pengalaman pengguna yang lebih baik */
+/* Menggunakan variabel CSS untuk konsistensi warna */
+:root {
+    --color-dark-blue: #0f172a;
+    --color-blue: #1e293b;
+    --color-white-transparent: rgba(255, 255, 255, 0.1);
+    --color-white-transparent-border: rgba(255, 255, 255, 0.2);
+    --color-shadow-purple: rgba(31, 38, 135, 0.37);
+    --color-text-purple: #a855f7;
+    --color-text-light-purple: #c084fc;
+    --color-text-gray: #e2e8f0;
+    --color-slate-800: #1e293b;
+    --color-slate-700: #334155;
+    --color-text-light-gray: #94a3b8;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
-    /* Gradien gelap untuk background */
-    background: radial-gradient(circle, #1e293b 0%, #0f172a 100%); 
-    overflow-x: hidden; /* Mencegah scroll horizontal akibat bola-bola */
+    background: radial-gradient(circle, var(--color-blue) 0%, var(--color-dark-blue) 100%); 
+    overflow-x: hidden;
 }
 html {
     scroll-padding-top: 5rem;
@@ -12,12 +26,12 @@ html {
 
 /* Container utama dengan efek glassmorphism */
 .glass-container {
-    background: rgba(255, 255, 255, 0.1); /* Background transparan */
-    backdrop-filter: blur(10px); /* Efek buram */
-    -webkit-backdrop-filter: blur(10px); /* Dukungan untuk browser Webkit */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Border transparan */
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Shadow untuk kedalaman */
-    border-radius: 2rem; /* Sudut membulat */
+    background: var(--color-white-transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--color-white-transparent-border);
+    box-shadow: 0 8px 32px 0 var(--color-shadow-purple);
+    border-radius: 2rem;
 }
 
 /* Efek border gradient pada foto profil */
@@ -32,7 +46,7 @@ html {
     left: -4px;
     right: -4px;
     bottom: -4px;
-    background: linear-gradient(45deg, #a855f7, #6b21a8, #c084fc);
+    background: linear-gradient(45deg, var(--color-text-purple), #6b21a8, var(--color-text-light-purple));
     border-radius: 9999px;
     z-index: -1;
     animation: rotate-gradient 3s linear infinite;
@@ -51,13 +65,13 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Di belakang konten utama */
+    z-index: -1;
     pointer-events: none;
 }
 .bubble {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05); /* Warna putih transparan */
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     animation: float 4s infinite, scale 6s infinite alternate;
 }
