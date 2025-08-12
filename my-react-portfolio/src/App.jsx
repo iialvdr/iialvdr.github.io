@@ -4,6 +4,8 @@ import Sidebar from './components/Sidebar';
 import HomePage from './pages/HomePage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import './assets/style.css';
+// Baris di bawah ini dihapus untuk menghindari konflik
+// import './assets/index.css';
 
 function App() {
   return (
