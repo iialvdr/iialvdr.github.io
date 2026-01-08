@@ -3,14 +3,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     });
 });
 
@@ -20,31 +16,12 @@ const mobileMenu = document.getElementById('mobile-menu');
 const hamburgerIcon = document.getElementById('hamburger-icon');
 const closeIcon = document.getElementById('close-icon');
 
-if (hamburgerMenu && mobileMenu) {
-    hamburgerMenu.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.contains('hidden');
-        
-        if (isHidden) {
-            // Buka menu
-            mobileMenu.classList.remove('hidden');
-            setTimeout(() => {
-                mobileMenu.classList.remove('opacity-0', 'translate-y-5');
-            }, 10); // Delay kecil untuk animasi
-            hamburgerIcon.classList.add('hidden');
-            closeIcon.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Cegah scroll background
-        } else {
-            // Tutup menu
-            mobileMenu.classList.add('opacity-0', 'translate-y-5');
-            setTimeout(() => {
-                mobileMenu.classList.add('hidden');
-            }, 300); // Sesuaikan dengan durasi transisi CSS
-            hamburgerIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-    });
-}
+hamburgerMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    hamburgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+    document.body.classList.toggle('overflow-hidden');
+});
 
 // Sembunyikan menu setelah mengklik link
 document.querySelectorAll('#mobile-menu a').forEach(link => {
@@ -53,7 +30,7 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
             mobileMenu.classList.add('hidden');
             hamburgerIcon.classList.remove('hidden');
             closeIcon.classList.add('hidden');
-            document.body.style.overflow = 'auto';
+            document.body.classList.remove('overflow-hidden');
         }
     });
 });
