@@ -1,363 +1,1327 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Rivaldi Aditya Maulana</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="text-gray-200 min-h-screen antialiased">
-
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              babyblue: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="text-slate-600 min-h-screen antialiased selection:bg-babyblue-200 selection:text-babyblue-800"
+  >
     <div class="bg-bubbles">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
     </div>
 
-    <header class="p-4 sm:p-8 lg:hidden fixed top-0 left-0 w-full z-40 bg-[rgba(15,23,42,0.9)] backdrop-blur-md">
-        <div class="flex justify-between items-center max-w-7xl mx-auto">
-            <h1 class="text-xl font-bold text-white">Rivaldi</h1>
-            <button id="hamburger-menu" class="text-purple-400 p-2 rounded-md focus:outline-none">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
-        </div>
+    <header
+      class="p-4 sm:p-8 lg:hidden fixed top-0 left-0 w-full z-40 bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-sm"
+    >
+      <div class="flex justify-between items-center max-w-7xl mx-auto">
+        <h1 class="text-xl font-bold text-slate-800 tracking-tight">
+          Rivaldi.
+        </h1>
+        <button
+          id="hamburger-menu"
+          class="text-babyblue-500 p-2 rounded-xl hover:bg-babyblue-50 transition-colors focus:outline-none"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              id="hamburger-icon"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+            <path
+              id="close-icon"
+              class="hidden"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </header>
 
-    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-[rgba(15,23,42,0.9)] backdrop-blur-md z-30 overflow-y-auto pt-24">
-        <div class="glass-container p-8 m-4 sm:m-8">
-            <nav class="w-full text-left space-y-2">
-                <a href="#about" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg><span>Tentang Saya</span></span>
-                </a>
-                <a href="#experience" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg><span>Pengalaman</span></span>
-                </a>
-                <a href="#skills" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="m18 16-2 2-6 6-6-6 6-6 2-2 6 6z"></path><path d="m12 6-6-6-6 6 6 6z"></path></svg><span>Keahlian</span></span>
-                </a>
-                <a href="#education" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="M2 12s3 7 10 7 10-7 10-7"></path><path d="M2 12l10 7 10-7"></path><path d="M12 19V5"></path></svg><span>Pendidikan</span></span>
-                </a>
-                <a href="#non-formal-education" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="m15 19-6-6-6 6"></path><path d="m15 19 6-6-6-6-6 6z"></path></svg><span>Pendidikan Nonformal</span></span>
-                </a>
-                <a href="#languages" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="M12 21.5c-3.7 0-6.8-2.6-7.3-6L1 12l3.7-3.5c.5-3.4 3.6-6 7.3-6 5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5z"></path><path d="M12 12s-3.5 1-4.5 3c-1.2 2.3 0 4 0 4s2.2-2.3 4.5-3c1.2-1.7 4.5-3 4.5-3s-3.3-1.7-4.5-3c-1.2-2.3 0-4 0-4s-2.2 2.3-4.5 3c-1.2 1.7-4.5 3-4.5 3z"></path></svg><span>Bahasa</span></span>
-                </a>
-                <a href="#work" class="block p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"></path><path d="M12 9v6"></path><path d="M9 12h6"></path></svg><span>Proyek</span></span>
-                </a>
-            </nav>
-        </div>
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-0 left-0 w-full h-full bg-white/90 backdrop-blur-xl z-30 overflow-y-auto pt-24 transition-all duration-300"
+    >
+      <div
+        class="p-8 m-4 sm:m-8 bg-white rounded-3xl shadow-xl border border-babyblue-100"
+      >
+        <nav class="w-full text-left space-y-2">
+          <a
+            href="#about"
+            class="block p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500 mr-2"
+              >
+                <path d="m9 18 6-6-6-6"></path></svg
+              ><span>Tentang Saya</span></span
+            >
+          </a>
+          <a
+            href="#experience"
+            class="block p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect width="4" height="12" x="2" y="9"></rect>
+                <circle cx="4" cy="4" r="2"></circle></svg
+              ><span>Pengalaman</span></span
+            >
+          </a>
+          <a
+            href="#skills"
+            class="block p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500"
+              >
+                <path d="m18 16-2 2-6 6-6-6 6-6 2-2 6 6z"></path>
+                <path d="m12 6-6-6-6 6 6 6z"></path></svg
+              ><span>Keahlian</span></span
+            >
+          </a>
+          <a
+            href="#education"
+            class="block p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500"
+              >
+                <path d="M2 12s3 7 10 7 10-7 10-7"></path>
+                <path d="M2 12l10 7 10-7"></path>
+                <path d="M12 19V5"></path></svg
+              ><span>Pendidikan</span></span
+            >
+          </a>
+          <a
+            href="#non-formal-education"
+            class="block p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500"
+              >
+                <path d="m15 19-6-6-6 6"></path>
+                <path d="m15 19 6-6-6-6-6 6z"></path></svg
+              ><span>Pendidikan Nonformal</span></span
+            >
+          </a>
+          <a
+            href="#languages"
+            class="block p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500"
+              >
+                <path
+                  d="M12 21.5c-3.7 0-6.8-2.6-7.3-6L1 12l3.7-3.5c.5-3.4 3.6-6 7.3-6 5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5z"
+                ></path>
+                <path
+                  d="M12 12s-3.5 1-4.5 3c-1.2 2.3 0 4 0 4s2.2-2.3 4.5-3c1.2-1.7 4.5-3 4.5-3s-3.3-1.7-4.5-3c-1.2-2.3 0-4 0-4s-2.2 2.3-4.5 3c-1.2 1.7-4.5 3-4.5 3z"
+                ></path></svg
+              ><span>Bahasa</span></span
+            >
+          </a>
+          <a
+            href="#work"
+            class="block p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500"
+              >
+                <path
+                  d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"
+                ></path>
+                <path d="M12 9v6"></path>
+                <path d="M9 12h6"></path></svg
+              ><span>Proyek</span></span
+            >
+          </a>
+        </nav>
+      </div>
     </div>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        <aside class="lg:sticky lg:top-8 h-fit p-8 glass-container flex-col items-center text-center hidden lg:flex">
-            <div class="w-40 h-40 mb-6 rounded-full overflow-hidden profile-border">
+    <div
+      class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 pt-6 lg:pt-12 px-4 sm:px-8"
+    >
+      <aside
+        class="lg:sticky lg:top-12 h-fit p-8 glass-container flex-col items-center text-center hidden lg:flex shadow-2xl shadow-babyblue-100/50"
+      >
+        <div
+          class="w-40 h-40 mb-6 rounded-full overflow-hidden profile-border ring-4 ring-white shadow-lg"
+        >
+          <img
+            src="image/profile.png"
+            alt="Rivaldi Aditya Maulana"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <h1 class="text-3xl font-bold text-slate-800 mb-2 tracking-tight">
+          Rivaldi Aditya M.
+        </h1>
+        <span
+          class="px-4 py-1.5 rounded-full bg-babyblue-100 text-babyblue-600 text-xs font-bold uppercase tracking-wider mb-6"
+          >UI/UX & Frontend</span
+        >
+
+        <div class="space-y-4 text-left w-full mt-4">
+          <p
+            class="flex items-center space-x-3 text-sm text-slate-500 font-medium"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 text-babyblue-500"
+            >
+              <path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+              <path d="M12 19a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"></path>
+            </svg>
+            <span>Johar Baru, Jakarta Pusat</span>
+          </p>
+          <a
+            href="tel:085155433102"
+            class="flex items-center space-x-3 text-sm text-slate-500 hover:text-babyblue-600 transition-colors duration-300 font-medium group"
+          >
+            <span
+              class="p-2 bg-babyblue-50 rounded-lg group-hover:bg-babyblue-100 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-500"
+              >
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                ></path>
+              </svg>
+            </span>
+            <span>0851-5543-3102</span>
+          </a>
+          <a
+            href="mailto:rivaldiadityamaulana28@gmail.com"
+            class="flex items-center space-x-3 text-sm text-slate-500 hover:text-babyblue-600 transition-colors duration-300 font-medium group"
+          >
+            <span
+              class="p-2 bg-babyblue-50 rounded-lg group-hover:bg-babyblue-100 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-500"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </span>
+            <span class="truncate">rivaldiadityamaulana28@gmail.com</span>
+          </a>
+        </div>
+
+        <div class="w-full h-px bg-slate-100 my-6"></div>
+
+        <nav class="w-full text-left space-y-2">
+          <a
+            href="#about"
+            class="flex items-center space-x-3 p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 text-babyblue-500 mr-2"
+            >
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+            <span>Tentang Saya</span>
+          </a>
+          <a
+            href="#experience"
+            class="flex items-center space-x-3 p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 text-babyblue-500 mr-2"
+            >
+              <path
+                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+              ></path>
+              <rect width="4" height="12" x="2" y="9"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span>Pengalaman</span>
+          </a>
+          <a
+            href="#skills"
+            class="flex items-center space-x-3 p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 text-babyblue-500 mr-2"
+            >
+              <path d="m18 16-2 2-6 6-6-6 6-6 2-2 6 6z"></path>
+              <path d="m12 6-6-6-6 6 6 6z"></path>
+            </svg>
+            <span>Keahlian</span>
+          </a>
+          <a
+            href="#education"
+            class="flex items-center space-x-3 p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 text-babyblue-500 mr-2"
+            >
+              <path d="M2 12s3 7 10 7 10-7 10-7"></path>
+              <path d="M2 12l10 7 10-7"></path>
+              <path d="M12 19V5"></path>
+            </svg>
+            <span>Pendidikan</span>
+          </a>
+          <a
+            href="#non-formal-education"
+            class="flex items-center space-x-3 p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500"
+              >
+                <path d="m15 19-6-6-6 6"></path>
+                <path d="m15 19 6-6-6-6-6 6z"></path></svg
+              ><span>Pendidikan Nonformal</span></span
+            >
+          </a>
+          <a
+            href="#languages"
+            class="flex items-center space-x-3 p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <span class="flex items-center space-x-3"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5 text-babyblue-500"
+              >
+                <path
+                  d="M12 21.5c-3.7 0-6.8-2.6-7.3-6L1 12l3.7-3.5c.5-3.4 3.6-6 7.3-6 5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5z"
+                ></path>
+                <path
+                  d="M12 12s-3.5 1-4.5 3c-1.2 2.3 0 4 0 4s2.2-2.3 4.5-3c1.2-1.7 4.5-3 4.5-3s-3.3-1.7-4.5-3c-1.2-2.3 0-4 0-4s-2.2 2.3-4.5 3c-1.2 1.7-4.5 3-4.5 3z"
+                ></path></svg
+              ><span>Bahasa</span></span
+            >
+          </a>
+          <a
+            href="#work"
+            class="flex items-center space-x-3 p-3 text-sm font-semibold rounded-xl text-slate-600 hover:bg-babyblue-50 hover:text-babyblue-600 transition-all duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="h-5 w-5 text-babyblue-500 mr-2"
+            >
+              <path
+                d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"
+              ></path>
+              <path d="M12 9v6"></path>
+              <path d="M9 12h6"></path>
+            </svg>
+            <span>Proyek</span>
+          </a>
+        </nav>
+      </aside>
+
+      <div class="lg:hidden mt-20 mb-8">
+        <div
+          class="glass-container flex flex-col items-center text-center p-8 shadow-2xl shadow-babyblue-100/50"
+        >
+          <div
+            class="w-32 h-32 mb-4 rounded-full overflow-hidden profile-border ring-4 ring-white shadow-lg"
+          >
+            <img
+              src="image/profile.png"
+              alt="Rivaldi Aditya Maulana"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h1 class="text-2xl font-bold text-slate-800 mb-1">
+            Rivaldi Aditya M.
+          </h1>
+          <p class="text-babyblue-500 font-semibold mb-6">
+            UI/UX Designer & Frontend
+          </p>
+          <div class="space-y-3 text-left w-full">
+            <p
+              class="flex items-center justify-center space-x-2 text-sm text-slate-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-500"
+              >
+                <path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path>
+                <path d="M12 19a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"></path>
+              </svg>
+              <span>Johar Baru, Jakarta Pusat</span>
+            </p>
+            <div class="flex justify-center space-x-4">
+              <a
+                href="tel:085155433102"
+                class="p-2 bg-babyblue-50 rounded-full text-babyblue-600 hover:bg-babyblue-100 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="mailto:rivaldiadityamaulana28@gmail.com"
+                class="p-2 bg-babyblue-50 rounded-full text-babyblue-600 hover:bg-babyblue-100 transition"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2 space-y-8 pb-12">
+        <section id="about" class="p-8 glass-container">
+          <h2 class="text-2xl font-bold text-slate-800 mb-4 flex items-center">
+            <span class="p-2 bg-babyblue-100 rounded-lg mr-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-600"
+              >
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </span>
+            Tentang Saya
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Mahasiswa semester 6 jurusan
+            <strong class="text-babyblue-600">Sistem Informasi</strong> di
+            <strong>Universitas Gunadarma</strong> dengan minat kuat dalam
+            <strong class="text-babyblue-600">UI/UX Design</strong> dan
+            <strong class="text-babyblue-600">Frontend Web Development</strong>.
+            Memiliki pemahaman mendalam tentang pengembangan sistem digital,
+            desain antarmuka yang berfokus pada pengalaman pengguna, serta
+            kemampuan dalam mengimplementasikan desain ke dalam kode menggunakan
+            HTML, CSS, dan JavaScript. Berpengalaman menggunakan Figma untuk
+            membuat prototipe interaktif dan terus mengasah keterampilan
+            analisis, desain, dan pengkodean. Bersemangat untuk mengembangkan
+            kemampuan lebih jauh dan berkontribusi dalam menciptakan solusi
+            digital yang inovatif dan ramah pengguna.
+          </p>
+        </section>
+
+        <section id="experience" class="p-8 glass-container">
+          <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+            <span class="p-2 bg-babyblue-100 rounded-lg mr-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-600"
+              >
+                <path d="m9 18 6-6-6-6"></path>
+              </svg>
+            </span>
+            Pengalaman
+          </h2>
+          <div
+            class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 ease-in-out"
+          >
+            <div
+              class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-slate-800">
+                  Magang Administrasi Akademik
+                </h3>
+                <p
+                  class="text-sm font-semibold text-babyblue-500 uppercase tracking-wide mt-1"
+                >
+                  Universitas Muhammadiyah Prof. Dr. Hamka (UHAMKA)
+                </p>
+                <p class="text-xs text-slate-400 mt-1 flex items-center">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 mr-2"></span
+                  >Oktober 2021 – April 2022
+                </p>
+              </div>
+              <a
+                href="https://drive.google.com/file/d/1AEYO3r2r2qgvmX-CHOd12RVYtFLU69sr/view?usp=sharing"
+                class="mt-4 sm:mt-0 px-5 py-2.5 text-sm font-bold text-white bg-babyblue-500 rounded-xl hover:bg-babyblue-600 shadow-lg shadow-babyblue-200 transition-all duration-300"
+                >Lihat Sertifikat</a
+              >
+            </div>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span
+                  ><strong>Menyusun Berita Terkini Seputar UHAMKA:</strong>
+                  Mengembangkan konten informatif dan menarik tentang kegiatan,
+                  prestasi, serta pengumuman penting di lingkungan UHAMKA untuk
+                  dipublikasikan di situs web resmi.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span
+                  ><strong>Mendesain Twibbon dan Poster Kreatif:</strong>
+                  Membuat desain twibbon dan poster yang menarik untuk mendukung
+                  promosi berita serta profil dosen.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span
+                  ><strong>Memastikan Kelayakan Fasilitas Komputer:</strong>
+                  Melakukan pemeriksaan terhadap komputer yang tersedia di
+                  UHAMKA untuk memastikan kondisi perangkat memenuhi standar
+                  operasional.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="skills" class="p-8 glass-container">
+          <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+            <span class="p-2 bg-babyblue-100 rounded-lg mr-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-600"
+              >
+                <path d="m18 16-2 2-6 6-6-6 6-6 2-2 6 6z"></path>
+                <path d="m12 6-6-6-6 6 6 6z"></path>
+              </svg>
+            </span>
+            Keahlian
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-bold text-slate-700 mb-3 text-sm uppercase tracking-wider">
+                  Bahasa Pemrograman
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-babyblue-50 text-babyblue-600 border border-babyblue-100 text-xs font-semibold px-3 py-1.5 rounded-lg">HTML & CSS</span>
+                  <span class="bg-babyblue-50 text-babyblue-600 border border-babyblue-100 text-xs font-semibold px-3 py-1.5 rounded-lg">JavaScript</span>
+                  <span class="bg-babyblue-50 text-babyblue-600 border border-babyblue-100 text-xs font-semibold px-3 py-1.5 rounded-lg">PHP</span>
+                  <span class="bg-babyblue-50 text-babyblue-600 border border-babyblue-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Go (Go-Lang)</span>
+                  <span class="bg-babyblue-50 text-babyblue-600 border border-babyblue-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Java</span>
+                  <span class="bg-babyblue-50 text-babyblue-600 border border-babyblue-100 text-xs font-semibold px-3 py-1.5 rounded-lg">C#</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-slate-700 mb-3 text-sm uppercase tracking-wider">
+                  Database
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-orange-50 text-orange-600 border border-orange-100 text-xs font-semibold px-3 py-1.5 rounded-lg">MySQL</span>
+                  <span class="bg-orange-50 text-orange-600 border border-orange-100 text-xs font-semibold px-3 py-1.5 rounded-lg">SQL Server</span>
+                  <span class="bg-orange-50 text-orange-600 border border-orange-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Oracle</span>
+                  <span class="bg-orange-50 text-orange-600 border border-orange-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Firebase</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-slate-700 mb-3 text-sm uppercase tracking-wider">
+                  Desain UI/UX
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-purple-50 text-purple-600 border border-purple-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Figma</span>
+                  <span class="bg-purple-50 text-purple-600 border border-purple-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Adobe XD</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-bold text-slate-700 mb-3 text-sm uppercase tracking-wider">
+                  Framework & Tools
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-emerald-50 text-emerald-600 border border-emerald-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Tailwind CSS</span>
+                  <span class="bg-emerald-50 text-emerald-600 border border-emerald-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Polymer</span>
+                  <span class="bg-emerald-50 text-emerald-600 border border-emerald-100 text-xs font-semibold px-3 py-1.5 rounded-lg">ASP.NET</span>
+                  <span class="bg-emerald-50 text-emerald-600 border border-emerald-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Git & GitHub</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-slate-700 mb-3 text-sm uppercase tracking-wider">
+                  Desain Grafis
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-pink-50 text-pink-600 border border-pink-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Adobe Illustrator</span>
+                  <span class="bg-green-50 text-green-600 border border-green-100 text-xs font-semibold px-3 py-1.5 rounded-lg">CorelDRAW</span>
+                  <span class="bg-slate-100 text-slate-600 border border-slate-200 text-xs font-semibold px-3 py-1.5 rounded-lg">InkScape</span>
+                  <span class="bg-blue-50 text-blue-600 border border-blue-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Canva</span>
+                </div>
+              </div>
+
+              <div>
+                <h4 class="font-bold text-slate-700 mb-3 text-sm uppercase tracking-wider">
+                  Soft Skills
+                </h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-teal-50 text-teal-600 border border-teal-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Manajemen Waktu</span>
+                  <span class="bg-teal-50 text-teal-600 border border-teal-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Pemecahan Masalah</span>
+                  <span class="bg-teal-50 text-teal-600 border border-teal-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Komunikasi</span>
+                  <span class="bg-teal-50 text-teal-600 border border-teal-100 text-xs font-semibold px-3 py-1.5 rounded-lg">Kerja Sama Tim</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="education" class="p-8 glass-container">
+          <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+            <span class="p-2 bg-babyblue-100 rounded-lg mr-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-600"
+              >
+                <path d="M2 12s3 7 10 7 10-7 10-7"></path>
+                <path d="M2 12l10 7 10-7"></path>
+                <path d="M12 19V5"></path>
+              </svg>
+            </span>
+            Pendidikan
+          </h2>
+          <div class="space-y-4">
+            <div
+              class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 flex items-center justify-between group"
+            >
+              <div>
+                <h3
+                  class="text-lg font-bold text-slate-800 group-hover:text-babyblue-600 transition-colors"
+                >
+                  Sistem Informasi
+                </h3>
+                <p class="text-sm font-medium text-slate-500">
+                  Universitas Gunadarma
+                </p>
+              </div>
+              <span
+                class="text-xs font-bold bg-slate-100 text-slate-500 px-3 py-1 rounded-full"
+                >2022 - Sekarang</span
+              >
+            </div>
+            <div
+              class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 flex items-center justify-between group"
+            >
+              <div>
+                <h3
+                  class="text-lg font-bold text-slate-800 group-hover:text-babyblue-600 transition-colors"
+                >
+                  Multimedia
+                </h3>
+                <p class="text-sm font-medium text-slate-500">
+                  SMK Pariwisata Metland
+                </p>
+              </div>
+              <span
+                class="text-xs font-bold bg-slate-100 text-slate-500 px-3 py-1 rounded-full"
+                >2019 - 2022</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <section id="non-formal-education" class="p-8 glass-container">
+          <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+            <span class="p-2 bg-babyblue-100 rounded-lg mr-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-600"
+              >
+                <path d="m15 19-6-6-6 6"></path>
+                <path d="m15 19 6-6-6-6-6 6z"></path>
+              </svg>
+            </span>
+            Pendidikan Nonformal
+          </h2>
+
+          <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 ease-in-out mb-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-800">
+                  Go-Lang For Intermediate
+                </h3>
+                <p class="text-sm font-semibold text-babyblue-500 mt-1">
+                  Universitas Gunadarma
+                </p>
+                <p class="text-xs text-slate-400 mt-1 flex items-center">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 mr-2"></span>
+                  Februari 2025
+                </p>
+              </div>
+              <a
+                href="sert/GO-LANG FOR INTERMEDIATE.pdf" 
+                class="mt-4 sm:mt-0 px-5 py-2.5 text-sm font-bold text-white bg-babyblue-500 rounded-xl hover:bg-babyblue-600 shadow-lg shadow-babyblue-200 transition-all duration-300"
+                >Lihat Sertifikat</a
+              >
+            </div>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Unit Testing:</strong> Implementasi Test Driven Development (TDD) dan Unit Test yang efektif.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Database & SQL:</strong> Integrasi Structure Query Language (SQL) dalam aplikasi Go.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Web Service:</strong> Penanganan HTTP Request, JSON, dan pembuatan Web Server dengan Go.</span>
+              </li>
+               <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Polymer & Deployment:</strong> Pengembangan Frontend dengan Polymer dan proses Deployment aplikasi.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 ease-in-out mb-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-800">
+                  Dasar Bahasa Pemrograman JavaScript
+                </h3>
+                <p class="text-sm font-semibold text-babyblue-500 mt-1">
+                  Lembaga Pengembangan Komputerisasi Univ. Gunadarma
+                </p>
+                <p class="text-xs text-slate-400 mt-1 flex items-center">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 mr-2"></span>
+                  Januari 2025
+                </p>
+              </div>
+              <a
+                href="sert/JavaScript Programming Language Fundamental.pdf"
+                class="mt-4 sm:mt-0 px-5 py-2.5 text-sm font-bold text-white bg-babyblue-500 rounded-xl hover:bg-babyblue-600 shadow-lg shadow-babyblue-200 transition-all duration-300"
+                >Lihat Sertifikat</a
+              >
+            </div>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Program "Hello World":</strong> Memahami cara kerja dasar JavaScript dalam lingkungan pengembangan.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Struktur Program:</strong> Mempelajari variabel, tipe data, dan operator.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Logika:</strong> Menguasai penggunaan percabangan, perulangan, dan array.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>OOP Dasar:</strong> Belajar tentang pemrograman berorientasi objek (Object, Property, Method).</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 ease-in-out mb-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-800">
+                  SQL Server For Beginner
+                </h3>
+                <p class="text-sm font-semibold text-babyblue-500 mt-1">
+                  Universitas Gunadarma
+                </p>
+                <p class="text-xs text-slate-400 mt-1 flex items-center">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 mr-2"></span>
+                  Agustus 2024
+                </p>
+              </div>
+              <a
+                href="sert/SQL SERVER FOR BEGINNER.pdf"
+                class="mt-4 sm:mt-0 px-5 py-2.5 text-sm font-bold text-white bg-babyblue-500 rounded-xl hover:bg-babyblue-600 shadow-lg shadow-babyblue-200 transition-all duration-300"
+                >Lihat Sertifikat</a
+              >
+            </div>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Database Administration:</strong> Manajemen sistem database, tabel, serta keamanan (Security & Role).</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Query & Functions:</strong> Penggunaan SQL Function dan teknik Joining Table.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Programming:</strong> Dasar pemrograman SQL Server dan pembuatan struktur kontrol.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 ease-in-out mb-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-800">
+                  Go-Lang For Beginner
+                </h3>
+                <p class="text-sm font-semibold text-babyblue-500 mt-1">
+                  Universitas Gunadarma
+                </p>
+                <p class="text-xs text-slate-400 mt-1 flex items-center">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 mr-2"></span>
+                  Februari 2024
+                </p>
+              </div>
+              <a
+                href="sert/GO-LANG FOR BEGINNER.pdf"
+                class="mt-4 sm:mt-0 px-5 py-2.5 text-sm font-bold text-white bg-babyblue-500 rounded-xl hover:bg-babyblue-600 shadow-lg shadow-babyblue-200 transition-all duration-300"
+                >Lihat Sertifikat</a
+              >
+            </div>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Konsep Dasar:</strong> Variabel, Tipe Data, Konversi, Operator, dan Logika Percabangan/Perulangan.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Data Structure:</strong> Pemahaman mendalam tentang Struct, Pointer, Slice, dan Map.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Web Basics:</strong> Pengenalan Web Server, JSON, dan Routing dasar pada Go.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 ease-in-out mb-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-800">
+                  Fundamental DBMS
+                </h3>
+                <p class="text-sm font-semibold text-babyblue-500 mt-1">
+                  Universitas Gunadarma
+                </p>
+                <p class="text-xs text-slate-400 mt-1 flex items-center">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 mr-2"></span>
+                  Agustus 2023
+                </p>
+              </div>
+              <a
+                href="sert/FUNDAMENTAL DBMS.pdf"
+                class="mt-4 sm:mt-0 px-5 py-2.5 text-sm font-bold text-white bg-babyblue-500 rounded-xl hover:bg-babyblue-600 shadow-lg shadow-babyblue-200 transition-all duration-300"
+                >Lihat Sertifikat</a
+              >
+            </div>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Database Relasional:</strong> Konsep dasar dan struktur database relasional.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>MySQL & Oracle:</strong> Implementasi DDL (Data Definition Language) dan DML (Data Manipulation Language).</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>SQL Server:</strong> Pengenalan SQL Server dan penggunaan perintah Select dasar.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100 hover:border-babyblue-300 transition-all duration-300 ease-in-out">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
+              <div>
+                <h3 class="text-xl font-bold text-slate-800">
+                  Fundamental Web Programming
+                </h3>
+                <p class="text-sm font-semibold text-babyblue-500 mt-1">
+                  Universitas Gunadarma
+                </p>
+                <p class="text-xs text-slate-400 mt-1 flex items-center">
+                  <span class="w-2 h-2 rounded-full bg-slate-300 mr-2"></span>
+                  Februari 2023
+                </p>
+              </div>
+              <a
+                href="sert/FUNDAMENTAL WEB PROGRAMMING.pdf"
+                class="mt-4 sm:mt-0 px-5 py-2.5 text-sm font-bold text-white bg-babyblue-500 rounded-xl hover:bg-babyblue-600 shadow-lg shadow-babyblue-200 transition-all duration-300"
+                >Lihat Sertifikat</a
+              >
+            </div>
+            <ul class="space-y-3 text-slate-600 text-sm">
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Web & Go:</strong> Pengantar pemrograman Web dan struktur kontrol bahasa Go.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>Java Tech:</strong> Pengenalan J2EE, Servlet, dan Java Server Page (JSP).</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-babyblue-400 mr-2 mt-1">➜</span>
+                <span><strong>.NET Framework:</strong> Dasar bahasa C# dan kontrol server pada ASP.NET.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="languages" class="p-8 glass-container">
+          <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+            <span class="p-2 bg-babyblue-100 rounded-lg mr-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-600"
+              >
+                <path
+                  d="M12 21.5c-3.7 0-6.8-2.6-7.3-6L1 12l3.7-3.5c.5-3.4 3.6-6 7.3-6 5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5z"
+                ></path>
+                <path
+                  d="M12 12s-3.5 1-4.5 3c-1.2 2.3 0 4 0 4s2.2-2.3 4.5-3c1.2-1.7 4.5-3 4.5-3s-3.3-1.7-4.5-3c-1.2-2.3 0-4 0-4s-2.2 2.3-4.5 3c-1.2 1.7-4.5 3-4.5 3z"
+                ></path>
+              </svg>
+            </span>
+            Bahasa
+          </h2>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div
+              class="text-center p-4 bg-white rounded-xl border border-slate-100 shadow-sm"
+            >
+              <div class="text-2xl mb-1">🇮🇩</div>
+              <div class="font-bold text-slate-700">Indonesia</div>
+              <div class="text-xs text-babyblue-500 font-semibold">Native</div>
+            </div>
+            <div
+              class="text-center p-4 bg-white rounded-xl border border-slate-100 shadow-sm"
+            >
+              <div class="text-2xl mb-1">🇺🇸</div>
+              <div class="font-bold text-slate-700">Inggris</div>
+              <div class="text-xs text-babyblue-500 font-semibold">
+                Advanced
+              </div>
+            </div>
+            <div
+              class="text-center p-4 bg-white rounded-xl border border-slate-100 shadow-sm"
+            >
+              <div class="text-2xl mb-1">🇰🇷</div>
+              <div class="font-bold text-slate-700">Korea</div>
+              <div class="text-xs text-slate-400">Beginner</div>
+            </div>
+            <div
+              class="text-center p-4 bg-white rounded-xl border border-slate-100 shadow-sm"
+            >
+              <div class="text-2xl mb-1">🇯🇵</div>
+              <div class="font-bold text-slate-700">Jepang</div>
+              <div class="text-xs text-slate-400">Beginner</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="work" class="p-8 glass-container">
+          <h2 class="text-2xl font-bold text-slate-800 mb-6 flex items-center">
+            <span class="p-2 bg-babyblue-100 rounded-lg mr-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-babyblue-600"
+              >
+                <path
+                  d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"
+                ></path>
+                <path d="M12 9v6"></path>
+                <path d="M9 12h6"></path>
+              </svg>
+            </span>
+            Proyek
+          </h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
+            <a
+              href="project-1.html"
+              class="group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 hover:border-babyblue-400 hover:shadow-xl hover:shadow-babyblue-100 transition-all duration-300 ease-in-out hover:-translate-y-1"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors z-10"
+                ></div>
                 <img
-                    src="https://placehold.co/160x160/1e293b/e2e8f0?text=Valdi"
-                    alt="Rivaldi Aditya Maulana"
-                    class="w-full h-full object-cover"
+                  src="image/chingumasak.png"
+                  alt="Website Resep Makanan Korea"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
-            </div>
-            <h1 class="text-3xl font-bold text-white mb-2">Rivaldi Aditya Maulana</h1>
-            <p class="text-purple-400 font-medium mb-6">UI/UX Designer & Frontend Web Developer</p>
-
-            <div class="space-y-4 text-left w-full mt-4">
-                <p class="flex items-center space-x-3 text-sm text-slate-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path><path d="M12 19a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"></path></svg>
-                    <span>Johar Baru, Jakarta Pusat</span>
+              </div>
+              <div class="p-5">
+                <h3
+                  class="text-lg font-bold text-slate-800 group-hover:text-babyblue-600 transition-colors"
+                >
+                  Resep Makanan Korea
+                </h3>
+                <p class="text-sm text-slate-500 mt-2 line-clamp-2">
+                  Website resep "ChinguMasak" yang interaktif dan mudah
+                  digunakan.
                 </p>
-                <a href="tel:085155433102" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <span>0851-5543-3102</span>
-                </a>
-                <a href="mailto:rivaldiadityamaulana28@gmail.com" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                    <span>rivaldiadityamaulana28@gmail.com</span>
-                </a>
-            </div>
-
-            <div class="w-full h-px bg-slate-800 my-6"></div>
-
-            <nav class="w-full text-left space-y-2">
-                <a href="#about" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
-                    <span>Tentang Saya</span>
-                </a>
-                <a href="#experience" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500 mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                    <span>Pengalaman</span>
-                </a>
-                <a href="#skills" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500 mr-2"><path d="m18 16-2 2-6 6-6-6 6-6 2-2 6 6z"></path><path d="m12 6-6-6-6 6 6 6z"></path></svg>
-                    <span>Keahlian</span>
-                </a>
-                <a href="#education" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500 mr-2"><path d="M2 12s3 7 10 7 10-7 10-7"></path><path d="M2 12l10 7 10-7"></path><path d="M12 19V5"></path></svg>
-                    <span>Pendidikan</span>
-                </a>
-                <a href="#non-formal-education" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="m15 19-6-6-6 6"></path><path d="m15 19 6-6-6-6-6 6z"></path></svg><span>Pendidikan Nonformal</span></span>
-                </a>
-                <a href="#languages" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <span class="flex items-center space-x-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500"><path d="M12 21.5c-3.7 0-6.8-2.6-7.3-6L1 12l3.7-3.5c.5-3.4 3.6-6 7.3-6 5.2 0 9.5 4.3 9.5 9.5s-4.3 9.5-9.5 9.5z"></path><path d="M12 12s-3.5 1-4.5 3c-1.2 2.3 0 4 0 4s2.2-2.3 4.5-3c1.2-1.7 4.5-3 4.5-3s-3.3-1.7-4.5-3c-1.2-2.3 0-4 0-4s-2.2 2.3-4.5 3c-1.2 1.7-4.5 3-4.5 3z"></path></svg><span>Bahasa</span></span>
-                </a>
-                <a href="#work" class="flex items-center space-x-3 p-3 text-sm font-medium rounded-lg text-slate-300 hover:bg-slate-800 hover:text-purple-400 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-500 mr-2"><path d="M6 3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"></path><path d="M12 9v6"></path><path d="M9 12h6"></path></svg>
-                    <span>Proyek</span>
-                </a>
-            </nav>
-        </aside>
-        
-        <div class="lg:hidden p-4 sm:p-8">
-            <div class="glass-container flex flex-col items-center text-center p-8 mt-20">
-                <div class="w-40 h-40 mb-6 rounded-full overflow-hidden profile-border">
-                    <img
-                        src="https://placehold.co/160x160/1e293b/e2e8f0?text=Valdi"
-                        alt="Rivaldi Aditya Maulana"
-                        class="w-full h-full object-cover"
-                    />
+                <div
+                  class="mt-4 flex items-center text-babyblue-500 text-sm font-semibold"
+                >
+                  Lihat Detail
+                  <span
+                    class="ml-1 group-hover:translate-x-1 transition-transform"
+                    >→</span
+                  >
                 </div>
-                <h1 class="text-3xl font-bold text-white mb-2">Rivaldi Aditya Maulana</h1>
-                <p class="text-purple-400 font-medium mb-6">UI/UX Designer & Frontend Web Developer</p>
-                <div class="space-y-4 text-left w-full mt-4">
-                    <p class="flex items-center space-x-3 text-sm text-slate-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M19 12a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"></path><path d="M12 19a7 7 0 1 0-14 0 7 7 0 0 0 14 0z"></path></svg>
-                        <span>Johar Baru, Jakarta Pusat</span>
-                    </p>
-                    <a href="tel:085155433102" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                        <span>0851-5543-3102</span>
-                    </a>
-                    <a href="mailto:rivaldiadityamaulana28@gmail.com" class="flex items-center space-x-3 text-sm text-slate-300 hover:text-purple-400 transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-400"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                        <span>rivaldiadityamaulana28@gmail.com</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="lg:col-span-2 space-y-8 p-4 sm:p-8 lg:p-0 lg:mt-8">
-            <section id="about" class="p-8 glass-container">
-                <h2 class="text-3xl font-bold text-white mb-4 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
-                    Tentang Saya
-                </h2>
-                <p class="text-gray-400 leading-relaxed">
-                    Mahasiswa semester 6 jurusan <strong>Sistem Informasi</strong> di <strong>Universitas Gunadarma</strong> dengan minat kuat dalam <strong>UI/UX Design</strong> dan <strong>Frontend Web Development</strong>. Memiliki pemahaman mendalam tentang pengembangan sistem digital, desain antarmuka yang berfokus pada pengalaman pengguna, serta kemampuan dalam mengimplementasikan desain ke dalam kode menggunakan HTML, CSS, dan JavaScript. Berpengalaman menggunakan Figma untuk membuat prototipe interaktif dan terus mengasah keterampilan analisis, desain, dan pengkodean. Bersemangat untuk mengembangkan kemampuan lebih jauh dan berkontribusi dalam menciptakan solusi digital yang inovatif dan ramah pengguna.
+              </div>
+            </a>
+            <a
+              href="project-2.html"
+              class="group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 hover:border-babyblue-400 hover:shadow-xl hover:shadow-babyblue-100 transition-all duration-300 ease-in-out hover:-translate-y-1"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors z-10"
+                ></div>
+                <img
+                  src="image/todolist.png"
+                  alt="Aplikasi Web To-Do List"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-5">
+                <h3
+                  class="text-lg font-bold text-slate-800 group-hover:text-babyblue-600 transition-colors"
+                >
+                  Aplikasi Web To-Do List
+                </h3>
+                <p class="text-sm text-slate-500 mt-2 line-clamp-2">
+                  Aplikasi manajemen tugas interaktif dengan fitur Local Storage
+                  dan filter berbasis JavaScript.
                 </p>
-            </section>
-            
-            <section id="experience" class="p-8 glass-container">
-    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
-        Pengalaman
-    </h2>
-    <div class="p-6 bg-slate-800 rounded-2xl shadow-lg border border-transparent hover:border-purple-500 transition-all duration-300 ease-in-out">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-            <div>
-                <h3 class="text-xl font-semibold text-white">Magang Administrasi Akademik</h3>
-                <p class="text-sm font-medium text-purple-300">Universitas Muhammadiyah Prof. Dr. Hamka (UHAMKA)</p>
-                <p class="text-xs text-gray-400">Oktober 2021 – April 2022</p>
-            </div>
-            <a href="https://drive.google.com/file/d/1AEYO3r2r2qgvmX-CHOd12RVYtFLU69sr/view?usp=sharing" class="mt-4 sm:mt-0 px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors duration-300">Lihat Sertifikat</a>
-        </div>
-        <ul class="list-disc list-inside mt-4 space-y-2 text-gray-400 text-sm">
-            <li>Menyusun Berita Terkini Seputar UHAMKA: Mengembangkan konten informatif dan menarik tentang kegiatan, prestasi, serta pengumuman penting di lingkungan UHAMKA untuk dipublikasikan di situs web resmi, meningkatkan informasi yang tersedia bagi civitas akademika.</li>
-            <li>Mendesain Twibbon dan Poster Kreatif: Membuat desain twibbon dan poster yang menarik untuk mendukung promosi berita serta profil dosen, berkontribusi pada peningkatan engagement dan citra visual UHAMKA.</li>
-            <li>Memastikan Kelayakan Fasilitas Komputer: Melakukan pemeriksaan terhadap komputer yang tersedia di UHAMKA untuk memastikan kondisi perangkat memenuhi standar operasional dan mendukung proses belajar mengajar secara optimal.</li>
-        </ul>
+                <div
+                  class="mt-4 flex items-center text-babyblue-500 text-sm font-semibold"
+                >
+                  Lihat Detail
+                  <span
+                    class="ml-1 group-hover:translate-x-1 transition-transform"
+                    >→</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a
+              href="project-3.html"
+              class="group bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100 hover:border-babyblue-400 hover:shadow-xl hover:shadow-babyblue-100 transition-all duration-300 ease-in-out hover:-translate-y-1 sm:col-span-2 lg:col-span-2"
+            >
+              <div class="relative h-48 overflow-hidden">
+                <div
+                  class="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors z-10"
+                ></div>
+                <img
+                  src="image/jurnalibadah.png"
+                  alt="Aplikasi Web Jurnal Ibadah"
+                  class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-5">
+                <h3
+                  class="text-lg font-bold text-slate-800 group-hover:text-babyblue-600 transition-colors"
+                >
+                  Aplikasi Web Jurnal Ibadah
+                </h3>
+                <p class="text-sm text-slate-500 mt-2">
+                  Aplikasi web online untuk memantau ibadah harian, jadwal
+                  sholat, dan Al-Qur'an digital yang modern.
+                </p>
+                <div
+                  class="mt-4 flex items-center text-babyblue-500 text-sm font-semibold"
+                >
+                  Lihat Detail
+                  <span
+                    class="ml-1 group-hover:translate-x-1 transition-transform"
+                    >→</span
+                  >
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
-</section>
 
-            <section id="skills" class="p-8 glass-container">
-                <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
-                    Keahlian
-                </h2>
-                
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Bahasa Pemrograman</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">HTML</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">CSS</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">JavaScript</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">PHP</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Pengelolaan Database</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">MySQL</span>
-                    </div>
-                </div>
-                
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Desain UI/UX</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Figma</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Adobe XD</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Desain Grafis</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Adobe Illustrator</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">CorelDRAW</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">InkScape</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Canva</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Software Office</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Microsoft Word</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Microsoft Excel</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Microsoft PowerPoint</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Analisis Data</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Power BI</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Pemodelan Sistem</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Umbrello</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">StarUML</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Alat Produktivitas</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Notion</span>
-                    </div>
-                </div>
-
-                <div class="mb-6">
-                    <h4 class="font-semibold text-purple-400 mb-2">Soft Skills</h4>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Manajemen Waktu</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Pemecahan Masalah</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Komunikasi</span>
-                        <span class="bg-purple-600/20 text-purple-300 text-xs font-medium px-3 py-1 rounded-full">Kerja Sama Tim</span>
-                    </div>
-                </div>
-            </section>
-
-            <section id="education" class="p-8 glass-container">
-                <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
-                    Pendidikan
-                </h2>
-                <div class="p-6 bg-slate-800 rounded-2xl shadow-lg mb-4 border border-transparent hover:border-purple-500 transition-all duration-300 ease-in-out">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">Sistem Informasi</h3>
-                            <p class="text-sm font-medium text-purple-300">Universitas Gunadarma</p>
-                            <p class="text-xs text-gray-400">2022 - Sekarang</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-6 bg-slate-800 rounded-2xl shadow-lg border border-transparent hover:border-purple-500 transition-all duration-300 ease-in-out">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-                        <div>
-                            <h3 class="text-xl font-semibold text-white">Multimedia</h3>
-                            <p class="text-sm font-medium text-purple-300">SMK Pariwisata Metland</p>
-                            <p class="text-xs text-gray-400">2019 - 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="non-formal-education" class="p-8 glass-container">
-    <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
-        Pendidikan Nonformal
-    </h2>
-    <div class="p-6 bg-slate-800 rounded-2xl shadow-lg border border-transparent hover:border-purple-500 transition-all duration-300 ease-in-out">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
-            <div>
-                <h3 class="text-xl font-semibold text-white">Dasar Bahasa Pemrograman JavaScript</h3>
-                <p class="text-sm font-medium text-purple-300">Lembaga Pengembangan Komputerisasi Universitas Gunadarma</p>
-            </div>
-            <a href="https://drive.google.com/file/d/1A4136fKLfW1BtYSmxEu8IeNhLMVP3GTz/view?usp=drive_link" class="mt-4 sm:mt-0 px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors duration-300">Lihat Sertifikat</a>
-        </div>
-        <ul class="list-disc list-inside mt-4 space-y-2 text-gray-400 text-sm">
-            <li>Membuat program "Hello World": Langkah pertama dalam belajar pemrograman adalah membuat program sederhana yang menampilkan teks "Hello World" ke layar atau konsol. Ini membantu memahami cara kerja dasar JavaScript dalam lingkungan pengembangan.</li>
-            <li>Memahami struktur program, variabel, tipe data, dan operator: Saya mempelajari cara menulis kode JavaScript yang benar, termasuk penggunaan variabel untuk menyimpan data, pemilihan tipe data yang tepat (seperti string, number, boolean), dan operator untuk melakukan operasi matematika atau logika.</li>
-            <li>Menggunakan percabangan, perulangan, dan array: Saya menguasai penggunaan percabangan (if, else) untuk membuat keputusan dalam kode, perulangan (for, while) untuk mengulang proses, dan array untuk menyimpan daftar data secara efisien.</li>
-            <li>Memahami konsep pemrograman berorientasi objek (OOP) dan penggunaan `this`: Saya belajar tentang pemrograman berorientasi objek (OOP) yang memungkinkan saya untuk membuat objek, menyimpan data (properti), dan mendefinisikan fungsi (metode). Saya juga memahami cara kerja kata kunci this dalam konteks objek.</li>
-        </ul>
-    </div>
-</section>
-
-            <section id="languages" class="p-8 glass-container">
-                <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
-                    Bahasa
-                </h2>
-                <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
-                    <li>Indonesia: Native</li>
-                    <li>Inggris: Advanced</li>
-                    <li>Korea: Beginner</li>
-                    <li>Jepang: Beginner</li>
-                </ul>
-            </section>
-
-            <section id="work" class="p-8 glass-container">
-                <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7 text-purple-500 mr-2"><path d="m9 18 6-6-6-6"></path></svg>
-                    Proyek
-                </h2>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="project-1.html" class="bg-slate-800 rounded-2xl shadow-lg overflow-hidden border border-transparent hover:border-purple-500 transition-all duration-300 ease-in-out hover:scale-105">
-                        <img src="image/chingumasak.png" alt="Desain Website E-Commerce yang responsif" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-white">Aplikasi Website Resep Makanan Korea ChinguMasak</h3>
-                            <p class="text-sm text-gray-400 mt-1">Website resep makanan Korea yang interaktif dan mudah digunakan.</p>
-                        </div>
-                    </a>
-                    <a href="project-2.html" class="bg-slate-800 rounded-2xl shadow-lg overflow-hidden border border-transparent hover:border-purple-500 transition-all duration-300 ease-in-out hover:scale-105">
-                        <img src="https://placehold.co/400x300/1e293b/94a3b8?text=Project+2" alt="Aplikasi Mobile To-Do List untuk produktivitas" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-white">Aplikasi Mobile To-Do List</h3>
-                            <p class="text-sm text-gray-400 mt-1">Sebuah aplikasi mobile untuk manajemen tugas harian yang intuitif dan menarik.</p>
-                        </div>
-                    </a>
-                    <a href="project-3.html" class="bg-slate-800 rounded-2xl shadow-lg overflow-hidden border border-transparent hover:border-purple-500 transition-all duration-300 ease-in-out hover:scale-105">
-                        <img src="https://placehold.co/400x300/1e293b/94a3b8?text=Project+3" alt="Landing Page modern untuk startup" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-lg font-semibold text-white">Landing Page Perusahaan Startup</h3>
-                            <p class="text-sm text-gray-400 mt-1">Landing page yang responsif dan modern untuk menarik perhatian calon pengguna.</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </div>
-    </div>
-    
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
